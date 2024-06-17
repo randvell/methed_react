@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.29.4",
-    "hygen": "^6.2.0"
+    "hygen": "^6.2.0",
+    "prop-types": "^15.8.1"
   }
 }
