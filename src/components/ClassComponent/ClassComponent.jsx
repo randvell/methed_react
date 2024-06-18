@@ -41,6 +41,8 @@ export class ClassComponent extends React.Component {
         newState.result = `Меньше`;
       }
 
+      newState.userNumber = '';
+
       return newState;
     });
   };
@@ -79,12 +81,15 @@ export class ClassComponent extends React.Component {
             type="number"
             id="user_number"
           />
-          <button className={style.btn} disabled={!this.state.canGuess}>
-            Угадать
-          </button>
-          <button className={style.btn} onClick={this.handleRestart}>
-            Начать сначала
-          </button>
+          {this.state.canGuess ? (
+            <button className={style.btn} disabled={!this.state.canGuess}>
+              Угадать
+            </button>
+          ) : (
+            <button className={style.btn} onClick={this.handleRestart}>
+              Начать сначала
+            </button>
+          )}
         </form>
       </div>
     );
